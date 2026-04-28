@@ -6,7 +6,7 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:20:32 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/26 11:23:10 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/13 11:14:17 by logname          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
@@ -43,4 +43,5 @@ void ft_putchar_fd(char c, int fd);
 void ft_putendl_fd(char *str, int fd);
 void ft_putnbr_fd(int n, int fd);
 char **ft_split(char const *str, char c);
-
+void *ft_calloc(size_t elementCount, size_t elementSize);
+//int ft_printf(const char *, ...);

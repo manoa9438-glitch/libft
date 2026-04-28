@@ -6,7 +6,7 @@
 /*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/27 09:26:17 by logname           #+#    #+#             */
-/*   Updated: 2026/03/27 18:46:28 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/10 12:12:30 by logname          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,6 @@ int count_words(char const *str, char c)
     return (len_array);
 }
 
-int count_letters(char const *str, char c)
-{
-
-    int len_array;
-    int i;
-
-
-}
-
 char **create_matrice(char const *str, char c)
 {
     char **result;
@@ -73,29 +64,22 @@ char **create_matrice(char const *str, char c)
     return (result);
 }
 
-char **ft_split(char const *str, char c)
+char **update_matrice(char const *str, char c, char **result)
 {
-    char **result;
     Split update = {0, 0, 0, 0};
     int len;
 
-    if (!str)
-        return NULL;
-    result = create_matrice(str, c);
-    if (!result)
-        return NULL;
     while (str[update.i])
     {
         if (str[update.i] != c && (update.i == 0 || str[update.i - 1] == c))
         {
             len = 0;
-            while (str[update.i + len] && str[update.i + len] != c)
-                len++;
+            while (str[update.i +  len] && str[update.i + len] != c)
+                 len++;
             update.y = 0;
-            while (update.y < len)
+            while (update.y <  len)
             {
-                result[update.len_array][update.y] = str[update.i];
-                update.i++;
+                result[update.len_array][update.y] = str[update.i++];
                 update.y++;
             }
             result[update.len_array][update.y] = '\0';
@@ -104,6 +88,19 @@ char **ft_split(char const *str, char c)
         else
             update.i++;
     }
+    return (result);
+}
+
+char **ft_split(char const *str, char c)
+{
+    char **result;
+
+    if (!str)
+        return NULL;
+    result = create_matrice(str, c);
+    if (!result)
+        return NULL;
+    result =  update_matrice(str, c, result);
     return result;
 }
 //
