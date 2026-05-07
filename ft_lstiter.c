@@ -1,54 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/24 18:06:48 by logname           #+#    #+#             */
-/*   Updated: 2026/05/04 14:41:57 by mabrugge         ###   ########.fr       */
+/*   Created: 2026/05/06 16:33:33 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/07 15:56:13 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+void    test(void *n)
 {
-	int	i;
-
-	if (!str || str[0] == '\0')
-		return (0);
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
+    printf("%d\n", *(int *)n);
 }
 
-char	*ft_strdup(char *src)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*dst;
-	int		i;
-	int		len;
+    t_list *current;
 
-	len = ft_strlen(src);
-	i = 0;
-	if (!src)
-		return (NULL);
-	dst = malloc(len + 1);
-	if (!dst)
-		return (NULL);
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[len] = '\0';
-	return (dst);
+    current = lst;
+    while (current != NULL)
+    {
+        f(current->content);
+        current = current->next;
+    }
+    
 }
+
 // int main()
 // {
-//     printf("%s", ft_strdup(""));
+//     t_list *head;
+//     int a;
+//     int b;
+
+//     a = 2;
+//     b = 3;
+//     head = create_linked_list(&a, &b);
+//     ft_lstiter(head, test);
 // }

@@ -3,36 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/26 10:08:01 by logname           #+#    #+#             */
-/*   Updated: 2026/03/26 10:25:28 by logname          ###   ########.fr       */
+/*   Created: 2026/05/03 18:19:27 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/03 18:19:31 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// void to_upper(unsigned int i, char *c)
+// {
+//     (void)i;
+//     if (*c >= 'a' && *c <= 'z')
+//         *c -= 32;
+// }
 
-char test(unsigned int i, char c)
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-    if (i % 2 == 0)
-        return (c - 32);
-    return (c);
-}
+	int	i;
 
-void ft_striteri(char *str, void (*f)(unsigned int, char*))
-{
-    int i;
-
-    i = 0;
-    while (str[i])
-    {
-        f(i, &str[i]);
-        i++;
-    }
+	i = 0;
+	while (str[i])
+	{
+		f(i, &str[i]);
+		i++;
+	}
 }
 
 // int main()
 // {
 //     char str[] = "hello world";
-//     ft_striteri(str, &test);
+//     ft_striteri(str, to_upper);
 // }

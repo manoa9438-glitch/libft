@@ -6,13 +6,13 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 11:10:39 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/09 11:14:19 by manoabrug        ###   ########.fr       */
+/*   Updated: 2026/04/28 18:08:14 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_tolower(char c)
+char	ft_tolower(char c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c = c + 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
 }

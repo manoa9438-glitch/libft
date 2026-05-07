@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 10:01:01 by logname           #+#    #+#             */
-/*   Updated: 2026/05/04 14:39:47 by mabrugge         ###   ########.fr       */
+/*   Created: 2026/05/06 15:05:12 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/07 18:23:35 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int value, size_t count)
+void    del(void *lst)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (count > 0)
-	{
-		count--;
-		*ptr++ = (unsigned char)value;
-	}
-	return (s);
+    free(lst);
 }
+
+void ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+    del(lst->content);
+    free(lst);
+}
+
+// int main()
+// {
+//     int nb = 3;
+
+//     ft_lstdelone(ft_lstnew(&nb), free);
+// }

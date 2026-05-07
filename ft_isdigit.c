@@ -6,13 +6,13 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:15:06 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/09 10:15:06 by manoabrug        ###   ########.fr       */
+/*   Updated: 2026/04/28 17:09:39 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(char c)
+int	ft_isdigit(char c)
 {
-    if (c >= '0' && c <= '9')
-        return 1;
-    return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

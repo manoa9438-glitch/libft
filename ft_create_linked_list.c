@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_create_linked_list.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 10:01:01 by logname           #+#    #+#             */
-/*   Updated: 2026/05/04 14:39:47 by mabrugge         ###   ########.fr       */
+/*   Created: 2026/05/07 16:11:42 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/07 16:54:44 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+#include "libft.h"
 
-void	*ft_memset(void *s, int value, size_t count)
+t_list *ft_create_linked_list(int *a, int *b)
 {
-	unsigned char	*ptr;
+    t_list *head;
+    t_list *new_node;
+    head = ft_lstnew(a);
+    new_node = ft_lstnew(b);
 
-	ptr = (unsigned char *)s;
-	while (count > 0)
-	{
-		count--;
-		*ptr++ = (unsigned char)value;
-	}
-	return (s);
+    ft_lstadd_front(&head, new_node);
+    return (head);
 }

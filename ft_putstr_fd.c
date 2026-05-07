@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/26 11:00:27 by logname           #+#    #+#             */
-/*   Updated: 2026/03/26 11:13:31 by logname          ###   ########.fr       */
+/*   Created: 2026/05/03 18:20:11 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/03 18:20:11 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-void ft_putstr_fd(char *str, int fd)
-{
-    int i;
-    if (str == NULL)
-        return;
 
-    i = 0;
-    while (str[i])
-    {
-        write(fd, &str[i], 1);
-        i++;
-    }
+void	ft_putstr_fd(char *str, int fd)
+{
+	int	i;
+
+	if (str == NULL)
+		return ;
+	i = 0;
+	while (str[i])
+	{
+		write(fd, &str[i], 1);
+		i++;
+	}
 }

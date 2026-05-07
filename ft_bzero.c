@@ -6,22 +6,22 @@
 /*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 09:49:12 by logname           #+#    #+#             */
-/*   Updated: 2026/03/17 09:56:48 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:01:10 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-void    ft_bzero(char *str, size_t size)
+
+void	ft_bzero(char *str, size_t size)
 {
-    size_t i;
+	size_t	i;
 
-    if (str == NULL || size == 0)
-        return;
-    i = 0;
-    while (i < size)
-    {
-        str[i] = '\0';
-        i++;
-    }
+	if (str == NULL || size == 0)
+		return ;
+	i = 0;
+	while (i < size)
+	{
+		str[i] = '\0';
+		i++;
+	}
 }
-

@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 10:01:01 by logname           #+#    #+#             */
-/*   Updated: 2026/05/04 14:39:47 by mabrugge         ###   ########.fr       */
+/*   Created: 2026/05/06 11:35:31 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/07 16:12:51 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memset(void *s, int value, size_t count)
+int ft_lstsize(t_list *lst)
 {
-	unsigned char	*ptr;
+    int i;
 
-	ptr = (unsigned char *)s;
-	while (count > 0)
-	{
-		count--;
-		*ptr++ = (unsigned char)value;
-	}
-	return (s);
+    i = 0;
+
+    while(lst!=NULL)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
 }
+
+// int main()
+// {
+//     t_list *head;
+//     int a;
+//     int b;
+
+//     a = 2;
+//     b = 3;
+//     head = create_linked_list(&a, &b);
+//     ft_lstsize(head);
+// }

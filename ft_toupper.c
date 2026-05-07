@@ -6,13 +6,13 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 11:19:29 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/09 11:24:00 by manoabrug        ###   ########.fr       */
+/*   Updated: 2026/04/28 16:54:18 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_toupper(char c)
+char	ft_toupper(char c)
 {
-    if (c >= 'a' && c <= 'z')
-        c = c - 32;
-    return c;
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
 }

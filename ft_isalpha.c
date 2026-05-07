@@ -6,19 +6,19 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 09:36:02 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/09 19:25:04 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:09:14 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char c)
+int	ft_isalpha(char c)
 {
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-            return (1);
-    return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
 
-//int main()
+// int main()
 //{
-  //  ft_isalpha('c');
-    // printf("%d", isalpha('c'));
+//  ft_isalpha('c');
+// printf("%d", isalpha('c'));
 //}

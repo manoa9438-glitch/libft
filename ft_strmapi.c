@@ -3,54 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 18:42:08 by logname           #+#    #+#             */
-/*   Updated: 2026/03/26 10:05:28 by logname          ###   ########.fr       */
+/*   Updated: 2026/05/04 14:51:31 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    if(!str || str[0] == '\0')
-        return (0);
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    {
-        i++;
-    }
-    return (i);
+	if (!str || str[0] == '\0')
+		return (0);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
 
-char test(unsigned int i, char c)
+char	test(unsigned int i, char c)
 {
-    if (i % 2 == 0)
-        return (c - 32);
-    return (c);
+	if (i % 2 == 0)
+		return (c - 32);
+	return (c);
 }
 
-char *ft_strmapi(char const *str, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-    int i;
+	int		i;
+	char	*result;
 
-    i = 0;
-    char *result;
-    result = malloc(sizeof(char) * (ft_strlen(str) + 1));
-    if (result == NULL)
-        return (NULL);
-    while (str[i])
-    {
-        result[i] = f(i, str[i]);
-        i++;
-    }
-    result[i] = '\0';
-    return (result);
+	i = 0;
+	result = malloc(sizeof(char) * (ft_strlen(str) + 1));
+	if (result == NULL)
+		return (NULL);
+	while (str[i])
+	{
+		result[i] = f(i, str[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
 // int main()

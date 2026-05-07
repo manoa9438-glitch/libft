@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/17 10:01:01 by logname           #+#    #+#             */
-/*   Updated: 2026/05/04 14:39:47 by mabrugge         ###   ########.fr       */
+/*   Created: 2026/05/05 14:10:00 by mabrugge          #+#    #+#             */
+/*   Updated: 2026/05/06 12:44:36 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+#include "libft.h" 
 
-void	*ft_memset(void *s, int value, size_t count)
+void ft_lstadd_front(t_list **head, t_list *new)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (count > 0)
-	{
-		count--;
-		*ptr++ = (unsigned char)value;
-	}
-	return (s);
+    new->next = *head;
+    *head = new;
 }
+
+// int main()
+// {
+//     t_list *head;
+
+//     head = NULL;
+//     int nb = 3;
+//     ft_lstadd_front(&head, ft_lstnew(&nb));
+// }

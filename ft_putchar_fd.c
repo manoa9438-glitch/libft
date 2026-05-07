@@ -6,13 +6,12 @@
 /*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 10:53:29 by logname           #+#    #+#             */
-/*   Updated: 2026/03/26 10:59:58 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:31:49 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, (&c), 1);
+	write(fd, (&c), 1);
 }

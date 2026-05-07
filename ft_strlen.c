@@ -3,28 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: logname <logname@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: mabrugge <mabrugge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 16:30:43 by logname           #+#    #+#             */
-/*   Updated: 2026/03/24 18:36:34 by logname          ###   ########.fr       */
+/*   Updated: 2026/05/04 14:52:49 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int ft_strlen(const char *str)
-{
-	if(!str || str[0] == '\0')
-		return (0);
-  int i;
 
-  i = 0;
-  while (str[i])
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	if (!str || str[0] == '\0')
+		return (0);
+	i = 0;
+	while (str[i])
 	{
-    	i++;
+		i++;
 	}
-  return (i);
+	return (i);
 }
 //#include <stdio.h>
-///int main()
+/// int main()
 //{
 //  char *buffer = "test";
-  //printf("%d", ft_strlen(buffer));
+// printf("%d", ft_strlen(buffer));
 //}

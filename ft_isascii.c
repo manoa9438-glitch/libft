@@ -6,13 +6,13 @@
 /*   By: manoabrug <manoabrug@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:30:13 by manoabrug         #+#    #+#             */
-/*   Updated: 2026/03/11 11:18:32 by logname          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:09:30 by mabrugge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(unsigned char c)
 {
-    if (c >= 1 && (c <= 127))
-        return (1);
-    return (0);
+	if (c >= 0 && (c <= 127))
+		return (1);
+	return (0);
 }
